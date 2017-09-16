@@ -1,0 +1,8 @@
+mild_depression_indication = 13 =< MADRS-S? =< 19 ;
+moderate_depression_indication = 20 =< MADRS-S? =< 24 ;
+severe_depression_indication = 35 =< MADRS-S? ;
+
+MADRS-S. -> mild_depression_indication -> (8[d] =< t =< 14[d]) -> MADRS-S. ;
+MADRS-S. -> moderate_depression_indication -> (8[d] =< t =< 14[d]) -> MADRS-S. ;
+MADRS-S. -> severe_depression_indication -> (8[d] =< t =< 14[d]) -> MADRS-S. ;
+
