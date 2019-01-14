@@ -1,8 +1,8 @@
 breath_geq_30? = F ;
 confused? = F ;
-age_geq_65y? = F;
+age_geq_65y? = F ;
 BP_under_90? = F ;
-hospital? == 0 < |{ confused?, age_geq_65y?, BP_under_90?, breath_geq_30? }| ;
+hospital? = 0 < |{ confused?, age_geq_65y?, BP_under_90?, breath_geq_30? }| ;
 
 confused. -> breath_geq_30. ;
 breath_geq_30. -> age_geq_65y. ;
