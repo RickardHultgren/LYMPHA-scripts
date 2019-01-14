@@ -1,11 +1,10 @@
-breath_geq_30? = T ;
-confused? = F ;
-age_geq_65y? = T ;
-BP_under_90? = T ;
+breath_geq_30? = 0 ;
+confused? = 0 ;
+age_geq_65y? = 0;
+BP_under_90? = 0 ;
+hospital? == 0 < |{ confused?, age_older_65?, BP_under_9?, breath_geq_30? }| ;
 
-hospital? == 1 < |{ confused?, age_older_65?, BP_under_9?, breath_geq_30? }| ;
-
-confused? -> breath_geq_30? ;
-breath_geq_30? -> age_geq_65y? ;
-age_geq_65y? -> BP_under_90? ;
-BP_under_90? -> hospital? ;
+confused. -> breath_geq_30. ;
+breath_geq_30. -> age_geq_65y. ;
+age_geq_65y. -> BP_under_90. ;
+BP_under_90. -> hospital? ;
