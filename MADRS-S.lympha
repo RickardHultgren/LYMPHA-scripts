@@ -1,9 +1,10 @@
 MADRS-S? = 15 ;
 
-mild_depression_indication. = 13 =< MADRS-S? ;
-moderate_depression_indication. = 20 =< MADRS-S? =< 24 ;
-severe_depression_indication. = 35 =< MADRS-S? ;
+mild_depression_indication? = 13 <= MADRS-S? ;
+moderate_depression_indication? = 20 <= MADRS-S? ;
+moderate_depression_indication? = 24 >= MADRS-S? ;
+severe_depression_indication? = 35 <= MADRS-S? ;
 
-MADRS-S. -> mild_depression_indication. ;
-MADRS-S. -> moderate_depression_indication. ;
-MADRS-S. -> severe_depression_indication. ;
+MADRS-S. -> mild_depression_indication? ;
+MADRS-S. -> moderate_depression_indication? ;
+MADRS-S. -> severe_depression_indication? ;
