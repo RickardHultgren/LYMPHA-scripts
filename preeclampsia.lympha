@@ -33,7 +33,7 @@ anxiety? -> blood_pressure. ;
 frothy_cough? -> blood_pressure. ; 
 blood_in_cough? -> blood_pressure. ; 
 
-risk1? = 4 == |{ female?, fertile?, possible_fertilization_last_9_months?, hypertension}| ;
+risk1? = 4 == |{ female?, fertile?, possible_fertilization_last_9_months?, hypertension?}| ;
 
 risk1? -> known_pregnancy? ;
 known_pregnancy_OR_partus? -> protein_in_urine. ;
