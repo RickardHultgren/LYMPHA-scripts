@@ -5,12 +5,8 @@
 #by Rickard Verner Hultgren
 #15 May 2019
 
-
-
 # Examination
-
 ## Typecally after week 20
-
 ## Criteria:
 PEprotein? = 1 <= |{ above_0.3g_proteinuria_24h?, above_30mg_mool_kvot_alb_krea? }| ;
 preeclampsia? = 3 <= |{ pregnancy?, hypertension?, PEprotein? }| ;
@@ -56,7 +52,6 @@ preeclampsia? -> max_fluid_input_2000ml_24h. ;
 preeclampsia? -> EKG. ; 
 
 preeclampsia? -> anestesia_contact. ; 
-
 
 preeclampsia? -> blood_pressure_150_100? ; 
 blood_pressure_150_100? -> Labetolol_OR_Nifedipin. ; 
