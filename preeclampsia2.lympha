@@ -5,3 +5,4 @@ meeting. -> fertile? ;
 female? -> risk1? ;
 fertile? -> risk1? ;
 hypertension? -> risk1? ;
+possible_fertilization_last_9_months? -> risk1? ;
