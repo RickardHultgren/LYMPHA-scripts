@@ -5,11 +5,9 @@
 #15 May 2019
 # Examination
 ## Typecally after week 20
-
 ## Criteria:
 PEprotein? = 1 <= |{ above_0.3g_proteinuria_24h?, above_30mg_mool_kvot_alb_krea? }| ;
 preeclampsia? = 3 <= |{ pregnancy?, hypertension?, PEprotein? }| ;
-
 renal_insuff? -> blood_pressure. ; 
 vomiting? -> blood_pressure. ; 
 diarrehea? -> blood_pressure. ; 
@@ -27,9 +25,7 @@ swetting? -> blood_pressure. ;
 anxiety? -> blood_pressure. ; 
 frothy_cough? -> blood_pressure. ; 
 blood_in_cough? -> blood_pressure. ; 
-
 risk1? = 4 == |{ female?, fertile?, possible_fertilization_last_9_months?, hypertension?}| ;
-
 risk1? -> known_pregnancy? ;
 known_pregnancy_OR_partus? -> protein_in_urine. ;
 known_pregnancy_OR_partus? -> blood_alb_krea. ;
@@ -37,25 +33,16 @@ risk1? -> no_confirmed_prenancy? ;
 no_confirmed_prenancy? -> pregnancy_Utest?;
 pregnancy_Utest? -> protein_in_urine. ;
 pregnancy_Utest? -> blood_alb_krea. ;
-
 meeting. -> female? ;
 meeting. -> fertile? ;
-
 female? -> risk1? ;
 fertile? -> risk1? ;
-
 # Initial treatment
-
 preeclampsia? -> max_fluid_input_2000ml_24h. ;
-
 preeclampsia? -> EKG. ; 
-
 preeclampsia? -> anestesia_contact. ; 
-
-
 preeclampsia? -> blood_pressure_150_100? ; 
 blood_pressure_150_100? -> Labetolol_OR_Nifedipin. ; 
-
 preeclampsia? -> systolic-blood_pressure_g180? ; 
 systolic-blood_pressure_g180? -> ACUTE_Labetolol_OR_Nifedipin. ; 
 systolic-blood_pressure_g180? -> artery-needle. ;
