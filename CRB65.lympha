@@ -1,3 +1,12 @@
+#LYMPHA v. 1.1
+#CRB65
+
+#Reference:
+#by Rickard Verner Hultgren
+#15 May 2019
+
+
+
 breath_geq_30? = 0 ;
 confused? = 0 ;
 age_geq_65y? = 1 ;
