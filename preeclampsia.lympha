@@ -1,43 +1,41 @@
 #LYMPHA v. 1.1
 #An attempt to summerize research and guidelines about preeclampsia.
-
 #Reference:
 #by Rickard Verner Hultgren
 #15 May 2019
-
 # Examination
 ## Typecally after week 20
 ## Criteria:
-PEprotein? = 1 <= |{ above_0.3g_proteinuria_24h?, above_30mg_mool_kvot_alb_krea? }| ;
+PEprotein? = 1 <= |{ above0.3gproteinuria24h?, above30mgmoolkvotalbkrea? }| ;
 preeclampsia? = 3 <= |{ pregnancy?, hypertension?, PEprotein? }| ;
 
-renal_insuff? -> blood_pressure. ; 
-vomiting? -> blood_pressure. ; 
-diarrehea? -> blood_pressure. ; 
-nausea? -> blood_pressure. ; 
-itching? -> blood_pressure. ; 
-cramps? -> blood_pressure. ; 
-swelling? -> blood_pressure. ; 
-headache? -> blood_pressure. ; 
-sight_disturbances? -> blood_pressure. ; 
-hyperreflexia? -> blood_pressure. ; 
-stroke? -> blood_pressure. ; 
-shortness_of_breath? -> blood_pressure. ; 
-orthopnea? -> blood_pressure. ; 
-swetting? -> blood_pressure. ; 
-anxiety? -> blood_pressure. ; 
-frothy_cough? -> blood_pressure. ; 
-blood_in_cough? -> blood_pressure. ; 
+renalinsuff? -> bloodpressure. ; 
+vomiting? -> bloodpressure. ; 
+diarrehea? -> bloodpressure. ; 
+nausea? -> bloodpressure. ; 
+itching? -> bloodpressure. ; 
+cramps? -> bloodpressure. ; 
+swelling? -> bloodpressure. ; 
+headache? -> bloodpressure. ; 
+sightdisturbances? -> bloodpressure. ; 
+hyperreflexia? -> bloodpressure. ; 
+stroke? -> bloodpressure. ; 
+shortnessofbreath? -> bloodpressure. ; 
+orthopnea? -> bloodpressure. ; 
+swetting? -> bloodpressure. ; 
+anxiety? -> bloodpressure. ; 
+frothycough? -> bloodpressure. ; 
+bloodincough? -> bloodpressure. ; 
 
-risk1? = 4 == |{ female?, fertile?, possible_fertilization_last_9_months?, hypertension?}| ;
+risk1? = 4 == |{ female?, fertile?, possiblefertilizationlast9months?, hypertension?}| ;
 
-risk1? -> known_pregnancy? ;
-known_pregnancy_OR_partus? -> protein_in_urine. ;
-known_pregnancy_OR_partus? -> blood_alb_krea. ;
-risk1? -> no_confirmed_prenancy? ;
-no_confirmed_prenancy? -> pregnancy_Utest?;
-pregnancy_Utest? -> protein_in_urine. ;
-pregnancy_Utest? -> blood_alb_krea. ;
+risk1? -> knownpregnancy? ;
+knownpregnancyORpartus? -> proteininurine. ;
+knownpregnancyORpartus? -> bloodalbkrea. ;
+risk1? -> noconfirmedprenancy? ;
+noconfirmedprenancy? -> pregnancyUtest?;
+pregnancyUtest? -> proteininurine. ;
+pregnancyUtest? -> bloodalbkrea. ;
 
 meeting. -> female? ;
 meeting. -> fertile? ;
@@ -47,15 +45,15 @@ fertile? -> risk1? ;
 
 # Initial treatment
 
-preeclampsia? -> max_fluid_input_2000ml_24h. ;
+preeclampsia? -> maxfluidinput2000ml24h. ;
 
 preeclampsia? -> EKG. ; 
 
-preeclampsia? -> anestesia_contact. ; 
+preeclampsia? -> anestesiacontact. ; 
 
-preeclampsia? -> blood_pressure_150_100? ; 
-blood_pressure_150_100? -> Labetolol_OR_Nifedipin. ; 
+preeclampsia? -> bloodpressure150100? ; 
+bloodpressure150100? -> LabetololORNifedipin. ; 
 
-preeclampsia? -> systolic-blood_pressure_g180? ; 
-systolic-blood_pressure_g180? -> ACUTE_Labetolol_OR_Nifedipin. ; 
-systolic-blood_pressure_g180? -> artery-needle. ;
+preeclampsia? -> systolic-bloodpressureg180? ; 
+systolic-bloodpressureg180? -> ACUTELabetololORNifedipin. ; 
+systolic-bloodpressureg180? -> artery-needle. ;
