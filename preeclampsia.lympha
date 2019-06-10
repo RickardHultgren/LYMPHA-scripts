@@ -1,3 +1,17 @@
+#LYMPHA v. 1.1
+#An attempt to summerize research and guidelines about preeclampsia.
+
+#Reference:
+#by Rickard Verner Hultgren
+#15 May 2019
+
+
+
+# Examination
+
+## Typecally after week 20
+
+## Criteria:
 PEprotein? = 1 <= |{ above_0.3g_proteinuria_24h?, above_30mg_mool_kvot_alb_krea? }| ;
 preeclampsia? = 3 <= |{ pregnancy?, hypertension?, PEprotein? }| ;
 
@@ -32,7 +46,8 @@ pregnancy_Utest? -> blood_alb_krea. ;
 meeting. -> female? ;
 meeting. -> fertile? ;
 
-
+female? -> risk1? ;
+fertile? -> risk1? ;
 
 # Initial treatment
 
