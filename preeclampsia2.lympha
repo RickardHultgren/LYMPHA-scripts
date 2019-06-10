@@ -4,3 +4,4 @@ meeting. -> female? ;
 meeting. -> fertile? ;
 female? -> risk1? ;
 fertile? -> risk1? ;
+hypertension? -> risk1? ;
