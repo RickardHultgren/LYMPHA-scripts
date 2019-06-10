@@ -1,8 +1,10 @@
+hypertension? -> risk1? ;
+possible_fertilization_last_9_months? -> risk1? ;
 risk1? = 4 == |{ female?, fertile?, possible_fertilization_last_9_months?, hypertension?}| ;
 risk1? -> known_pregnancy? ;
 meeting. -> female? ;
 meeting. -> fertile? ;
-female? -> risk1? ;
-fertile? -> risk1? ;
 hypertension? -> risk1? ;
 possible_fertilization_last_9_months? -> risk1? ;
+female? -> risk1? ;
+fertile? -> risk1? ;
