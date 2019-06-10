@@ -3,7 +3,7 @@ risk1? -> known_pregnancy? ;
 meeting. -> female? ;
 meeting. -> fertile? ;
 meeting. -> hypertension? ;
-meeting. -> possible_fertilization_last_9_months? ;
+meeting. -> possible-fertilization-last-9-months? ;
 hypertension? -> risk1? ;
 possible-fertilization-last-9-months? -> risk1? ;
 female? -> risk1? ;
