@@ -6,7 +6,7 @@
 # Examination
 ## Typecally after week 20
 ## Criteria:
-PEprotein? = 1 <= |{ above0.3gproteinuria24h?, above30mgmoolkvotalbkrea? }| ;
+PEprotein? = 1 <= |{ above03gproteinuria24h?, above30mgmoolkvotalbkrea? }| ;
 preeclampsia? = 3 <= |{ pregnancy?, hypertension?, PEprotein? }| ;
 
 renalinsuff? -> bloodpressure. ; 
