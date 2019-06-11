@@ -26,7 +26,7 @@ risk1? = 4 == |{ female?, fertile?, possible_fertilization_last_9_months?, hyper
 female? = 1 ;
 fertile? = 1 ;
 hypertension? = 1 ;
-months? = 1 ;
+possible_fertilization_last_9_months? = 1 ;
 
 renal_insuff? -> blood_pressure. ; 
 vomiting? -> blood_pressure. ; 
