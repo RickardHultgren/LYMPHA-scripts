@@ -33,7 +33,7 @@ blood_in_cough? -> blood_pr. ;
 
 risk1? = 4 == |{ female?, fertile?, possible?, hyper?}| ;
 
-risk1? -> known_pregnancy? ;
+risk1? -> known? ;
 known? -> Uprotein. ;
 known? -> AlbKrea. ;
 risk1? -> no? ;
