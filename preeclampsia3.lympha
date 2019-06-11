@@ -1,17 +1,12 @@
 #LYMPHA v. 1.1
 #An attempt to summerize research and guidelines about preeclampsia.
-
 #Reference:
 #by Rickard Verner Hultgren
 #15 May 2019
-
 # Examination
-
 ## Typecally after week 20
-
 ## Criteria:
 risk1? = 4 == |{ female?, fertile?, possible?, hyper?}| ;
-
 possible? -> risk1 ;
 hyper? -> risk1 ;
 risk1? -> known? ;
@@ -21,9 +16,7 @@ risk1? -> no? ;
 no? -> Utest?;
 Utest? -> Uprotein. ;
 Utest? -> AlbKrea. ;
-
 meeting. -> female? ;
 meeting. -> fertile? ;
-
 female? -> risk1? ;
 fertile? -> risk1? ;
