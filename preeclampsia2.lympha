@@ -12,6 +12,8 @@
 ## Typecally after week 20
 
 ## Criteria:
+meeting. -> PEprotein ;
+meeting. -> blood_pressure. ;
 PEprotein? = 1 <= |{ above_0.3g_proteinuria_24h?, above_30mg_mool_kvot_alb_krea? }| ;
 preeclampsia? = 3 <= |{ pregnancy?, hypertension?, PEprotein? }| ;
 
