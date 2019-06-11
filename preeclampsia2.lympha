@@ -1,3 +1,18 @@
+#LYMPHA v. 1.1
+#An attempt to summerize research and guidelines about preeclampsia.
+
+#Reference:
+#by Rickard Verner Hultgren
+#15 May 2019
+
+
+
+# Examination
+
+## Typecally after week 20
+
+## Criteria:
+
 risk? = 4 == |{ female?, fertile?, months?, hypertension?}| ;
 female? = 1 ;
 fertile? = 1 ;
