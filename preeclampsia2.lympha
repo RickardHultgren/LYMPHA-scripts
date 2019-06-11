@@ -13,11 +13,32 @@
 
 ## Criteria:
 
-risk? = 4 == |{ female?, fertile?, months?, hypertension?}| ;
+blood_pressure. -> hypertension? ;
+
+risk1? = 4 == |{ female?, fertile?, possible_fertilization_last_9_months?, hypertension?}| ;
 female? = 1 ;
 fertile? = 1 ;
 hypertension? = 1 ;
 months? = 1 ;
+
+renal_insuff? -> blood_pressure. ; 
+vomiting? -> blood_pressure. ; 
+diarrehea? -> blood_pressure. ; 
+nausea? -> blood_pressure. ; 
+itching? -> blood_pressure. ; 
+cramps? -> blood_pressure. ; 
+swelling? -> blood_pressure. ; 
+headache? -> blood_pressure. ; 
+sight_disturbances? -> blood_pressure. ; 
+hyperreflexia? -> blood_pressure. ; 
+stroke? -> blood_pressure. ; 
+shortness_of_breath? -> blood_pressure. ; 
+orthopnea? -> blood_pressure. ; 
+swetting? -> blood_pressure. ; 
+anxiety? -> blood_pressure. ; 
+frothy_cough? -> blood_pressure. ; 
+blood_in_cough? -> blood_pressure. ; 
+
 
 meeting. -> female? ;
 meeting. -> fertile? ;
