@@ -10,29 +10,10 @@
 ## Typecally after week 20
 
 ## Criteria:
-PEprotein? = 1 <= |{ above03mg?, above30mg? }| ;
-preeclampsia? = 3 <= |{ pregnancy?, hyper?, PEprotein? }| ;
-
-renal_insuff? -> blood_pr. ; 
-vomiting? -> blood_pr. ; 
-diarrehea? -> blood_pr. ; 
-nausea? -> blood_pr. ; 
-itching? -> blood_pr. ; 
-cramps? -> blood_pr. ; 
-swelling? -> blood_pr. ; 
-headache? -> blood_pr. ; 
-sight_disturbances? -> blood_pr. ; 
-hyperreflexia? -> blood_pr. ; 
-stroke? -> blood_pr. ; 
-shortness_of_breath? -> blood_pr. ; 
-orthopnea? -> blood_pr. ; 
-swetting? -> blood_pr. ; 
-anxiety? -> blood_pr. ; 
-frothy_cough? -> blood_pr. ; 
-blood_in_cough? -> blood_pr. ; 
-
 risk1? = 4 == |{ female?, fertile?, possible?, hyper?}| ;
 
+possible? -> risk1 ;
+hyper? -> risk1 ;
 risk1? -> known? ;
 known? -> Uprotein. ;
 known? -> AlbKrea. ;
