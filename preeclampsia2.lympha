@@ -22,6 +22,8 @@ preeclampsia? = 3 <= |{ pregnancy?, hypertension?, PEprotein? }| ;
 before_meeting. -> blood_pressure.
 blood_pressure. -> hypertension? ;
 
+before_meeting -> meeting. ;
+
 risk1? = 4 == |{ female?, fertile?, possible_fertilization_last_9_months?, hypertension?}| ;
 female? = 1 ;
 fertile? = 1 ;
@@ -50,9 +52,9 @@ blood_in_cough? -> blood_pressure. ;
 meeting. -> female? ;
 meeting. -> fertile? ;
 meeting. -> hypertension? ;
-meeting. -> months? ;
+meeting. -> possible_fertilization_last_9_months? ;
 hypertension? -> risk? ;
-months? -> risk? ;
+possible_fertilization_last_9_months? -> risk? ;
 female? -> risk? ;
 fertile? -> risk? ;
 risk? -> known_pregnancy? ;
