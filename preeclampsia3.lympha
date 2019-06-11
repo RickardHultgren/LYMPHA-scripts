@@ -1,0 +1,66 @@
+#LYMPHA v. 1.1
+#An attempt to summerize research and guidelines about preeclampsia.
+
+#Reference:
+#by Rickard Verner Hultgren
+#15 May 2019
+
+
+
+# Examination
+
+## Typecally after week 20
+
+## Criteria:
+PEprotein? = 1 <= |{ above03mg?, above30mg? }| ;
+preeclampsia? = 3 <= |{ pregnancy?, hypertension?, PEprotein? }| ;
+
+renal_insuff? -> blood_pr. ; 
+vomiting? -> blood_pr. ; 
+diarrehea? -> blood_pr. ; 
+nausea? -> blood_pr. ; 
+itching? -> blood_pr. ; 
+cramps? -> blood_pr. ; 
+swelling? -> blood_pr. ; 
+headache? -> blood_pr. ; 
+sight_disturbances? -> blood_pr. ; 
+hyperreflexia? -> blood_pr. ; 
+stroke? -> blood_pr. ; 
+shortness_of_breath? -> blood_pr. ; 
+orthopnea? -> blood_pr. ; 
+swetting? -> blood_pr. ; 
+anxiety? -> blood_pr. ; 
+frothy_cough? -> blood_pr. ; 
+blood_in_cough? -> blood_pr. ; 
+
+risk1? = 4 == |{ female?, fertile?, possible?, hypertension}| ;
+
+risk1? -> known_pregnancy? ;
+known? -> Uprotein. ;
+known? -> AlbKrea. ;
+risk1? -> no? ;
+no? -> Utest?;
+Utest? -> Uprotein. ;
+Utest? -> AlbKrea. ;
+
+meeting. -> female? ;
+meeting. -> fertile? ;
+
+female? -> risk1? ;
+fertile? -> risk1? ;
+
+# Initial treatment
+
+preeclampsia? -> maxH2O. ;
+
+preeclampsia? -> EKG. ; 
+
+preeclampsia? -> anestCont. ; 
+
+
+preeclampsia? -> bloodPr150100? ; 
+bloodPr150100? -> Labetolol_OR_Nifedipin. ; 
+
+preeclampsia? -> sysBloodPrG180? ; 
+sysBloodPrG180? -> ACUTELORN. ; 
+sysBloodPrG180? -> artery-needle. ;
