@@ -8,4 +8,4 @@
 ## Criteria:
 female? -> risk1? ;
 fertile? -> risk1? ;
-risk1? = 4 == |{ female?, fertile?, possible?, hyper?}| ;
+risk1? = 2 == |{ female?, fertile?}| ;
