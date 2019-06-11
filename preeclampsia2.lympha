@@ -11,49 +11,57 @@
 
 ## Typecally after week 20
 
-## Criteria:
-before_meeting. -> above_30mg_mool_kvot_alb_krea? ;
-before_meeting. -> above_0.3g_proteinuria_24h? ;
-before_meeting. -> PEprotein? ;
-meeting. -> blood_pressure. ;
-PEprotein? = 1 <= |{ above_0.3g_proteinuria_24h?, above_30mg_mool_kvot_alb_krea? }| ;
-preeclampsia? = 3 <= |{ pregnancy?, hypertension?, PEprotein? }| ;
-
-before_meeting. -> blood_pressure.
-blood_pressure. -> hypertension? ;
-
+## Variables
 risk1? = 4 == |{ female?, fertile?, possible_fertilization_last_9_months?, hypertension?}| ;
+above_30mg_mool_kvot_alb_krea? = 1 ;
+above_0.3g_proteinuria_24h? = 1 ;
+PEprotein? = 1 ;
 female? = 1 ;
 fertile? = 1 ;
 hypertension? = 1 ;
 possible_fertilization_last_9_months? = 1 ;
 
-renal_insuff? -> blood_pressure. ; 
-vomiting? -> blood_pressure. ; 
-diarrehea? -> blood_pressure. ; 
-nausea? -> blood_pressure. ; 
-itching? -> blood_pressure. ; 
-cramps? -> blood_pressure. ; 
-swelling? -> blood_pressure. ; 
-headache? -> blood_pressure. ; 
-sight_disturbances? -> blood_pressure. ; 
-hyperreflexia? -> blood_pressure. ; 
-stroke? -> blood_pressure. ; 
-shortness_of_breath? -> blood_pressure. ; 
-orthopnea? -> blood_pressure. ; 
-swetting? -> blood_pressure. ; 
-anxiety? -> blood_pressure. ; 
-frothy_cough? -> blood_pressure. ; 
-blood_in_cough? -> blood_pressure. ; 
+## Criteria:
+PEprotein? = 1 <= |{ above_0.3g_proteinuria_24h?, above_30mg_mool_kvot_alb_krea? }| ;
+preeclampsia? = 3 <= |{ pregnancy?, hypertension?, PEprotein? }| ;
 
-before_meeting. -> meeting. ;
+## Flow:
+renal_insuff? -> meeting. ; 
+vomiting? -> meeting. ; 
+diarrehea? -> meeting. ; 
+nausea? -> meeting. ; 
+itching? -> meeting. ; 
+cramps? -> meeting. ; 
+swelling? -> meeting. ; 
+headache? -> meeting. ; 
+sight_disturbances? -> meeting. ; 
+hyperreflexia? -> meeting. ; 
+stroke? -> meeting. ; 
+shortness_of_breath? -> meeting. ; 
+orthopnea? -> meeting. ; 
+swetting? -> meeting. ; 
+anxiety? -> meeting. ; 
+frothy_cough? -> meeting. ; 
+blood_in_cough? -> meeting. ; 
+
+
+
 
 meeting. -> female? ;
 meeting. -> fertile? ;
 meeting. -> blood_pressure. ;
 meeting. -> possible_fertilization_last_9_months? ;
-hypertension? -> risk? ;
-possible_fertilization_last_9_months? -> risk? ;
-female? -> risk? ;
-fertile? -> risk? ;
-risk? -> known_pregnancy? ;
+hypertension? -> risk0? ;
+possible_fertilization_last_9_months? -> risk0? ;
+risk0? = 3 <= |{ pregnancy?, hypertension? }| ;
+female? -> risk0? ;
+fertile? -> risk0? ;
+blood_pressure. -> hypertension? ;
+hypertension? -> risk0? ;
+risk0? -> further. ;
+
+further. -> above_30mg_mool_kvot_alb_krea? ;
+further. -> above_0.3g_proteinuria_24h? ;
+above_30mg_mool_kvot_alb_krea? -> PEprotein? ;
+above_0.3g_proteinuria_24h? -> PEprotein? ;
+PEprotein? -> preeclampsia? ;
