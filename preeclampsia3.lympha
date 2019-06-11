@@ -11,7 +11,7 @@
 
 ## Criteria:
 PEprotein? = 1 <= |{ above03mg?, above30mg? }| ;
-preeclampsia? = 3 <= |{ pregnancy?, hypertension?, PEprotein? }| ;
+preeclampsia? = 3 <= |{ pregnancy?, hyper?, PEprotein? }| ;
 
 renal_insuff? -> blood_pr. ; 
 vomiting? -> blood_pr. ; 
@@ -31,7 +31,7 @@ anxiety? -> blood_pr. ;
 frothy_cough? -> blood_pr. ; 
 blood_in_cough? -> blood_pr. ; 
 
-risk1? = 4 == |{ female?, fertile?, possible?, hypertension}| ;
+risk1? = 4 == |{ female?, fertile?, possible?, hyper?}| ;
 
 risk1? -> known_pregnancy? ;
 known? -> Uprotein. ;
