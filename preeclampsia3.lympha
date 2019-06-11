@@ -46,18 +46,3 @@ meeting. -> fertile? ;
 
 female? -> risk1? ;
 fertile? -> risk1? ;
-
-# Initial treatment
-
-preeclampsia? -> maxH2O. ;
-
-preeclampsia? -> EKG. ; 
-
-preeclampsia? -> anestCont. ; 
-
-preeclampsia? -> bloodPr150100? ; 
-bloodPr150100? -> Labetolol_OR_Nifedipin. ; 
-
-preeclampsia? -> sysBloodPrG180? ; 
-sysBloodPrG180? -> ACUTELORN. ; 
-sysBloodPrG180? -> artery-needle. ;
