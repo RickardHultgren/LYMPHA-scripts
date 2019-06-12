@@ -1,27 +1,10 @@
-#LYMPHA v. 1.1
-#An attempt to summerize research and guidelines about preeclampsia.
-
-#Reference:
-#by Rickard Verner Hultgren
-#15 May 2019
-
-
-
-# Examination
-
-## Typically after week 20
-
-## Variables
 above_30mg_mool_kvot_alb_krea? = 1 ;
 above_0.3g_proteinuria_24h? = 1 ;
 female? = 1 ;
 fertile? = 1 ;
 hypertension? = 1 ;
 possible_fertilization_last_9_months? = 1 ;
-#risk1? = 4 == |{ female?, fertile?, possible_fertilization_last_9_months?, hypertension?}| ;
 
-
-## Flow:
 renal_insuff? -> meeting. ; 
 vomiting? -> meeting. ; 
 diarrehea? -> meeting. ; 
@@ -40,22 +23,18 @@ anxiety? -> meeting. ;
 frothy_cough? -> meeting. ; 
 blood_in_cough? -> meeting. ; 
 
-#meeting. -> fertile? ;
 meeting. -> hypertension? ;
 meeting. -> female? ;
 meeting. -> possible_fertilization_last_9_months? ;
-#blood_pressure. -> hypertension? ;
+
 hypertension? -> risk0? ;
 possible_fertilization_last_9_months? -> risk0? ;
 female? -> risk0? ;
 risk0? = 3 == |{ female?, hypertension?, possible_fertilization_last_9_months? }| ;
-#risk0? = 2 == |{ pregnancy?, hypertension? }| ;
 risk0? -> pregnancy? ; 
-
 
 PEprotein? = 1 <= |{ above_0.3g_proteinuria_24h?, above_30mg_mool_kvot_alb_krea? }| ;
 preeclampsia? = 3 == |{ pregnancy?, hypertension?, PEprotein? }| ;
-
 
 pregnancy? -> above_30mg_mool_kvot_alb_krea? ;
 above_30mg_mool_kvot_alb_krea? -> PEprotein? ;
@@ -65,4 +44,3 @@ above_0.3g_proteinuria_24h? -> PEprotein? ;
 PEprotein? -> preeclampsia? ;
 
 preeclampsia? -> treatment.
-
