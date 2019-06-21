@@ -5,6 +5,24 @@ fertile? = 1 ;
 hypertension? = 1 ;
 possible_fertilization_last_9_months? = 1 ;
 
+screening. -> renal_insuff? ; 
+screening. -> vomiting? ; 
+screening. -> diarrehea? ; 
+screening. -> nausea? ; 
+screening. -> itching? ; 
+screening. -> cramps? ; 
+screening. -> swelling? ; 
+screening. -> headache? ; 
+screening. -> sight_disturbances? ; 
+screening. -> hyperreflexia? ; 
+screening. -> stroke? ; 
+screening. -> shortness_of_breath? ; 
+screening. -> orthopnea? ; 
+screening. -> swetting? ; 
+screening. -> anxiety? ; 
+screening. -> frothy_cough? ; 
+screening. -> blood_in_cough? ; 
+
 renal_insuff? -> meeting. ; 
 vomiting? -> meeting. ; 
 diarrehea? -> meeting. ; 
