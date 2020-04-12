@@ -7,11 +7,11 @@
 
 
 
-breath_geq_30? = 0 ;
-confused? = 0 ;
-age_geq_65y? = 1 ;
-BP_under_90? = 1 ;
-hospital? = 1 < |{ confused?, age_geq_65y?, BP_under_90?, breath_geq_30? }| ;
+breath_geq_30? = 1B ;
+confused? = 1B ;
+age_geq_65y? = 0B ;
+BP_under_90? = 0B ;
+hospital? = 4 == |{ confused?, age_geq_65y?, BP_under_90?, breath_geq_30? }| ;
 
 meeting. -> confused? ;
 meeting. -> breath_geq_30? ;
