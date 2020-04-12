@@ -1,0 +1,10 @@
+BMI? = weight?/(height?**2) ;
+
+meeting. -> weight? ;
+meeting. -> height? ;
+weight? -> BMI? ;
+height? -> BMI? ;
+BMI? -> overweight? ;
+
+
+
