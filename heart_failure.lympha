@@ -1,0 +1,23 @@
+#Script for heart failure
+
+elevated_NT_pro_BNP? = |{sex_female?, NT_pro_BNP?ng/L < 100, age?years < 65}| ;
+elevated_NT_pro_BNP? = |{sex_male?, NT_pro_BNP?ng/L < 100, age?years < 65}| ;
+elevated_NT_pro_BNP? = |{sex_female?, NT_pro_BNP?ng/L < 100, age?years >= 65}| ;
+elevated_NT_pro_BNP? = |{sex_male?, NT_pro_BNP?ng/L < 100, age?years >= 65}| ;
+
+heart_failure_I50? = 3 <= |{elevated_NT_pro_BNP?, EKG_left_ventricular_systolic_dysfunction?, heart_failure_symptoms?}| ;
+
+meeting. -> sex_female? ;
+meeting. -> NT_pro_BNP?ng/L ;
+meeting. -> age?years ;
+
+sex_female? -> elevated_NT_pro_BNP? ;
+NT_pro_BNP?ng/L -> elevated_NT_pro_BNP? ;
+age?years -> elevated_NT_pro_BNP? ;
+
+elevated_NT_pro_BNP? -> heart_failure_symptoms? ;
+EKG_left_ventricular_systolic_dysfunction? -> heart_failure_symptoms? ;
+heart_failure_symptoms? -> heart_failure_symptoms? ;
+
+heart_failure_I50? = 3 <= |{elevated_NT_pro_BNP?, EKG_left_ventricular_systolic_dysfunction?, heart_failure_symptoms?}| ;
+
