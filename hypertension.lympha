@@ -1,0 +1,12 @@
+hypertension_ucomplicated-and-no-med. -> ACE1-inhibitors. ;
+hypertension_ucomplicated-and-no-med. -> ARB2. ;
+hypertension_ucomplicated-and-no-med. -> potassium-antagonist-dihydropyridintype. ;
+hypertension_ucomplicated-and-no-med. -> tiazid. ;
+
+ACE1-inhibitors. -> evaluate. ;
+ARB2. -> evaluate. ;
+potassium-antagonist-dihydropyridintype. -> evaluate. ;
+tiazid. -> evaluate. ;
+
+evaluate. -> ARB2/ACE+tiazid/potassium ;
+
