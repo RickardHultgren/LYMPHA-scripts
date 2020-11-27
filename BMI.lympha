@@ -1,10 +1,21 @@
-BMI? = weight?/(height?**2) ;
+#
+
+
+weight? = 120 ;
+height? = 2 ;
+
+
+
+
+BMI? = weight?/(height?*height?) ;
+
+overweight? = 25 >= BMI? ;
+
+
 
 meeting. -> weight? ;
 meeting. -> height? ;
 weight? -> BMI? ;
 height? -> BMI? ;
 BMI? -> overweight? ;
-
-
-
+overweight? -> action? ;
