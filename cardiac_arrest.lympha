@@ -14,4 +14,4 @@ ECGrythm. -> asystole? ;
 PEA? -> less2min? ;
 asystole? -> less2min? ;
 e-shock. -> less2min? ;
-less2min? -> CPR ;
+less2min? -> CPR. ;
