@@ -4,7 +4,7 @@ no_carotid_pulse? -> CPR. ;
 no_femoral_pulse? -> CPR. ;
 no_carotid_pulse? -> CPR+ECG+IV. ;
 no_femoral_pulse? -> CPR+ECG+IV. ;
-CPR+ECG+IV. -> ECGrythm?  ;
+CPR+ECG+IV. -> ECGrythm. ;
 ECGrythm. -> VF? ;
 ECGrythm. -> VT? ;
 VT? -> e-shock. ;
