@@ -1,3 +1,8 @@
+#Sketch for script of cardiac arrest
+#VF = ventrical fibrillation
+#VT = pulseless ventricular tachycrdia
+#PEA = pulseless electrical activity
+
 sudden_loss_of_consciousness. -> no_carotid_pulse? ;
 sudden_loss_of_consciousness. -> no_femoral_pulse? ;
 no_carotid_pulse? -> CPR. ;
