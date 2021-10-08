@@ -1,0 +1,24 @@
+#Protocol for pharmacological treatment for ASD + anxiety
+#reference: https://pubmed.ncbi.nlm.nih.gov/30519027/
+#reference: https://pubmed.ncbi.nlm.nih.gov/22535309/
+#reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7071661/
+
+asd? -> delusion_OR_paranoia? ;
+asd? -> irritability? ;
+asd? -> hyperactivity_noncompliance? ;
+asd? -> inappropriate_speech? ;
+asd? -> stereotypic_behavior? ;
+
+delusion_OR_paranoia? -> ASA_A? ; 
+irritability? -> ASA_A? ; 
+hyperactivity_noncompliance? -> ASA_A? ; 
+inappropriate_speech? -> ASA_A? ; 
+stereotypic_behavior? -> ASA_A? ;
+
+ASA_A? -> anxiety?
+
+1? = anxiety? >= 28 ;
+
+anxiety? -> higher_dose_aripripazole_for_1_month. ;
+
+aripripazole_for_1_month. -> ASA-A ;

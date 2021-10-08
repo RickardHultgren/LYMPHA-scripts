@@ -1,0 +1,11 @@
+#Protocol for pharmacological treatment for ASD + insomnia
+
+asd? -> insomnia? ;
+
+insomnia? -> ASA_A? ; 
+
+ASA_A? -> no_anxiety?
+
+1? = no_anxiety? < 28 ;
+
+no_anxiety? -> melatonin ;
