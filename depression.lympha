@@ -4,4 +4,4 @@ meeting. -> low_mood? ;
 meeting. -> duration_over_two_weeks? ;
 depression? = 2 == |{ low_mood?, duration_over_two_weeks? }| ;
 depression? -> SSRI_one_step_higher_dose. ;
-SSRI_one_step_higher_dose. -> meeting. ;
+#SSRI_one_step_higher_dose. -> meeting. ;
