@@ -1,12 +1,7 @@
 #Sketch for depression treatment.
 
-meeting. -> depression_evaluation? ;
-depression_evaluation? -> depression. ;
-depression_evaluation? -> no_depression. ;
-depression. -> SSRI_one_step_higher_dose ;
-depression. -> SSRI_one_step_higher_dose ;
-SSRI_one_step_higher_dose ->
-depression_evaluation? ;
-no_depression. -> new_evaluation_in_three_months;
-new_evaluation_in_three_months -> no_depression. ;
-new_evaluation_in_three_months -> depression. ;
+meeting. -> low_mood? ;
+meeting. -> duration_over_2weeks? ;
+depression? = 2 == |{ duration_over_2weeks?, low_mood?}| ;
+depression? -> SSRI_one_step_higher_dose ;
+SSRI_one_step_higher_dose -> meeting. ;
