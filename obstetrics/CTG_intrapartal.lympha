@@ -1,4 +1,5 @@
-CTG_100_or_under_110_spm? -> = 0B ; 
+CTG_110_160_spm? = 1B ; 
+CTG_100_or_under_110_spm? = 0B ; 
 CTG_under_100_spm? = 0B ; 
 
 
