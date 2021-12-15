@@ -1,0 +1,16 @@
+CTG_100_or_under_110_spm? -> = 0B ; 
+CTG_100_or_under_110_spm? -> = 0B ; 
+CTG_100_or_under_110_spm? -> = 0B ; 
+CTG_under_100_spm? = 0B ; 
+CTG_under_100_spm? = 0B ; 
+CTG_under_100_spm? = 0B ; 
+
+CTG. -> CTG_110_160_spm? ; 
+CTG. -> CTG_100_or_under_110_spm? ; 
+CTG. -> CTG_under_100_spm? ; 
+CTG_100_or_under_110_spm? -> corrigate_reversible_causes. ; 
+CTG_100_or_under_110_spm? -> consider_stimulation_test. ; 
+CTG_100_or_under_110_spm? -> CTG. ; 
+CTG_under_100_spm? -> corrigate_reversible_causes. ; 
+CTG_under_100_spm? -> consider_stimulation_test. ; 
+CTG_under_100_spm? -> consider_labour ; 
