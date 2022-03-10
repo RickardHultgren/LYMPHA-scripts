@@ -1,0 +1,47 @@
+# Hypokalemia sketch
+# ICD10 E87.6
+# S_K is serum koncenctraion of potassium.
+
+manifistation_detection. -> hypertension? ;
+
+manifistation_detection. -> weakness? ;
+manifistation_detection. -> fatigue? ;
+manifistation_detection. -> apathy? ;
+manifistation_detection. -> anorexia? ;
+manifistation_detection. -> nausea? ;
+manifistation_detection. -> obstipation? ;
+manifistation_detection. -> subileus/ileus? ;
+manifistation_detection. -> decreased_tendon_reflexes? ;
+
+manifistation_detection. -> muscle_necrosis? ;
+
+hypertension? ;
+
+weakness? -> S_K? ;
+fatigue? -> S_K? ;
+apathy? -> S_K? ;
+anorexia? -> S_K? ;
+nausea? -> S_K? ;
+obstipation? -> S_K? ;
+subileus/ileus? -> S_K? ;
+decreased_tendon_reflexes? -> S_K? ;
+
+muscle_necrosis? ;
+
+E876_mild? = 3.5 <= S_K? ;
+E876_mild? = 3.0 => S_K? ;
+
+E876_medium? = 2.5 >= S_K? ;
+E876_medium? = 3.0 < S_K? ;
+
+E876_severe? = 2.5 < S_K? ;
+
+S_K? -> E876_mild? ;
+S_K? -> E876_medium? ;
+S_K? -> E876_severe? ;
+
+E876_medium? -> EKG. ;
+E876_severe? -> EKG. ;
+
+EKG. -> EKG? ;
+EKG. -> EKG? ;
