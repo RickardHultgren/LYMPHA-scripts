@@ -40,6 +40,10 @@ S_K? -> E876_mild? ;
 S_K? -> E876_medium? ;
 S_K? -> E876_severe? ;
 
+# K_IV stands for potassium IV-treatment.
+E876_medium? -> K_IV. ;
+E876_severe? -> K_IV. ;
+
 E876_medium? -> EKG. ;
 E876_severe? -> EKG. ;
 
