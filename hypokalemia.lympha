@@ -10,7 +10,7 @@ manifistation_detection. -> apathy? ;
 manifistation_detection. -> anorexia? ;
 manifistation_detection. -> nausea? ;
 manifistation_detection. -> obstipation? ;
-manifistation_detection. -> subileus/ileus? ;
+manifistation_detection. -> subileus_ileus? ;
 manifistation_detection. -> decreased_tendon_reflexes? ;
 
 manifistation_detection. -> muscle_necrosis? ;
@@ -23,7 +23,7 @@ apathy? -> S_K? ;
 anorexia? -> S_K? ;
 nausea? -> S_K? ;
 obstipation? -> S_K? ;
-subileus/ileus? -> S_K? ;
+subileus_ileus? -> S_K? ;
 decreased_tendon_reflexes? -> S_K? ;
 
 muscle_necrosis? ;
