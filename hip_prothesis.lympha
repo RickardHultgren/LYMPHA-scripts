@@ -1,0 +1,22 @@
+#LYMPHA-script that describes the following steps in post-surgical outpatient treatment:
+# - Wound inspection at the orthopaedic clinic in 3 weeks.
+# - Telephone appointment to the doctor in 4 months.
+# - Referral to a physiotherapist.
+
+out_after_NFB29 -> NFB29_outpatien_pharma
+NFB29_outpatien_pharma = {
+Cilaxoral(amount="7,5" unit="mg/ml" prescription"10g,in1w"), 
+Eliquis(amount="2,5" unit="mg" prescription"1x2in30d"),
+Omeprazol(amount="20" unit="mg" prescription"1x1in1w"),
+Oxynorm(amount="5" unit="mg" prescription"1n,max4/d"),
+Paracetamol(amount="500" unit="mg" prescription"2x3in4w")
+}
+
+out_after_NFB29 -> referal_wound_3w ;
+out_after_NFB29 -> referal_tel_ort_4m ;
+out_after_NFB29 -> referal_phsyiotherapist ;
+
+
+####
+#LaTeX document to the patient:
+#Du inkom %arrive-date till ortopeden Arvika sjukhus för %type %side sida som opererades in den %op-date. Operationen var komplikationsfri och efter operationen har du mått väsentligen bra. Du är adekvat smärtlindrad och har kunnat mobiliseras bra med sjukgymnast på avdelningen. Du anses tillsammans med oss vara utskrivningsklar från avdelning %ward.
