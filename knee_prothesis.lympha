@@ -1,1 +1,53 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+###
+Sedvanlig mobilisering.
+Återbesök till undertecknad om 8-9 veckor. 
+Agraffer ska tas hos specialistsköterska om 12-14 dagar.
 
+
+M171 -> NGB49 ;
+NGB49 -> out_after_NGB49 ;
+-> NGB49_outpatien_pharma
+NGB49_outpatien_pharma = {
+Etoricoxib(amount="120" unit="mg" prescription"1x1in5d"),
+Cilaxoral(amount="7,5" unit="mg/ml" prescription"10g,in1w"), 
+Eliquis(amount="2,5" unit="mg" prescription"1x2in10d"),
+Omeprazol(amount="20" unit="mg" prescription"1x1in1w"),
+Oxynorm(amount="5" unit="mg" prescription"1n,max4/din2w"),
+Paracetamol(amount="500" unit="mg" prescription"2x3in4w")
+} ;
+
+out_after_NGB49 -> referal_wound_2w ;
+out_after_NGB49 -> referal_followup_ort_9w ;
+out_after_NGB49 -> referal_phsyiotherapist_3w ;
+
+#if treatment with eliquis before surgery -- paus 2d. Prescribe fragmin 2d. After 2d - continue eliquis.
+#if zink <11 then prescribe Zolvezink 45mg 1 brustalblett 2 gånger dagligen i 3veckor (zink<11
+
+####
+#LaTeX document to the patient:
+#Du inkom %arrive-date till ortopeden för %type %side sida som opererades in den %op-date. Operationen var komplikationsfri och efter operationen har du mått väsentligen bra. Du är adekvat smärtlindrad och har kunnat mobiliseras bra med sjukgymnast på avdelningen. Du anses tillsammans med oss vara utskrivningsklar från avdelning %ward.
+Etoricoxib 120mg 1 tablett 1 gånger dagligen i 5 dagar. Mot smärta.
+Cilaxoral 7,5mg/ml 10 droppar i 1 vecka. Mot förstoppning. 
+Eliquis 2,5mg 1 tablett 2 gånger dagligen i 20 dagar. Förebygger blodpropp.
+Omeprazol 20mg 1 tablett 1 gång dagligen i 1 vecka. Magskyddande.
+Oxynorm 5mg 1 vid behov, max 4 dagligen, i 2 veckor. Smärtstillande.
+Paracetamol 500mg 2 tabletter 3 gånger dagligen i 4 veckor. Smärtstillande.
+
+Planering
+Sårkontroll om två veckor.
+Uppföljning hos ortoped om nio veckor.
+Remiss till vårdcentralens sjukgymnast.r
+=======
+
+>>>>>>> origin/maste
+r
+=======
+
+>>>>>>> origin/master
+=======
+
+>>>>>>> origin/maste
