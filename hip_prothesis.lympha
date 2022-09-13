@@ -17,6 +17,38 @@ out_after_NFB29 -> referal_tel_ort_4m ;
 out_after_NFB29 -> referal_phsyiotherapist ;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+#if treatment with eliquis before surgery -- paus 2d. Prescribe fragmin 2d. After 2d - continue eliquis.
+#if zink <11 then prescribe Zolvezink 45mg 1 brustalblett 2 gånger dagligen i 3veckor (zink<11
+
 ####
 #LaTeX document to the patient:
 #Du inkom %arrive-date till ortopeden Arvika sjukhus för %type %side sida som opererades in den %op-date. Operationen var komplikationsfri och efter operationen har du mått väsentligen bra. Du är adekvat smärtlindrad och har kunnat mobiliseras bra med sjukgymnast på avdelningen. Du anses tillsammans med oss vara utskrivningsklar från avdelning %ward.
+Cilaxoral 7,5mg/ml 10droppar i 1en vecka mot förstoppning. 
+Eliquis 2,5mg 1 tablett 2 gånger dagligen i 30 dagar mot blodproppar.
+Omeprazol 20mg 1 tablett 1gång dagligen i 1 vecka, magskyddande.
+Oxynorm 5mg 2vb, max 4 per dag. Smärtstillande.
+Paracetamol 500mg 2 tabletter 3 gånger dagligen i 4 veckor. Smärtstillande
+=======
+####
+#LaTeX document to the patient:
+#Du inkom %arrive-date till ortopeden Arvika sjukhus för %type %side sida som opererades in den %op-date. Operationen var komplikationsfri och efter operationen har du mått väsentligen bra. Du är adekvat smärtlindrad och har kunnat mobiliseras bra med sjukgymnast på avdelningen. Du anses tillsammans med oss vara utskrivningsklar från avdelning %ward.
+>>>>>>> origin/master
+=======
+####
+#LaTeX document to the patient:
+#Du inkom %arrive-date till ortopeden Arvika sjukhus för %type %side sida som opererades in den %op-date. Operationen var komplikationsfri och efter operationen har du mått väsentligen bra. Du är adekvat smärtlindrad och har kunnat mobiliseras bra med sjukgymnast på avdelningen. Du anses tillsammans med oss vara utskrivningsklar från avdelning %ward.
+>>>>>>> origin/master
+=======
+####
+#LaTeX document to the patient:
+#Du inkom %arrive-date till ortopeden Arvika sjukhus för %type %side sida som opererades in den %op-date. Operationen var komplikationsfri och efter operationen har du mått väsentligen bra. Du är adekvat smärtlindrad och har kunnat mobiliseras bra med sjukgymnast på avdelningen. Du anses tillsammans med oss vara utskrivningsklar från avdelning %ward.
+>>>>>>> origin/master
+=======
+####
+#LaTeX document to the patient:
+#Du inkom %arrive-date till ortopeden Arvika sjukhus för %type %side sida som opererades in den %op-date. Operationen var komplikationsfri och efter operationen har du mått väsentligen bra. Du är adekvat smärtlindrad och har kunnat mobiliseras bra med sjukgymnast på avdelningen. Du anses tillsammans med oss vara utskrivningsklar från avdelning %ward.
+>>>>>>> origin/master
