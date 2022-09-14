@@ -44,6 +44,8 @@
     <div id="output"></div>
 
     <py-env>
+    from datetime import date
+    from datetime import timedelta
     </py-env>
     <py-script>
     from js import console
@@ -55,6 +57,10 @@
     side = str("")
     ward = str("")
     pharma = str("")
+
+    today = date.today()
+    yesterday = today - timedelta(days = 1)
+
     def select_function(*args, **kwargs):
 
         console.log(f'args: {args}')
@@ -68,7 +74,8 @@
         if ICD == "NGB49" :
             Element('type-input').element.value = "primär totalprotes i knäled med cement"
             Element('ward-input').element.value = "78"
-            Element('pharma-list').element.innerText = ("abc")
+            Element('pharma-list').element.innerText = ("Etoricoxib 120mg 1 tablett 1 gånger dagligen i 5 dagar. Mot smärta.\nCilaxoral 7,5mg/ml 10 droppar i 1 vecka. Mot förstoppning.\nEliquis 2,5mg 1 tablett 2 gånger dagligen i 20 dagar. Förebygger blodpropp.\nOmeprazol 20mg 1 tablett 1 gång dagligen i 1 vecka. Magskyddande.\nOxynorm 5mg 1 vid behov, max 4 dagligen, i 2 veckor. Smärtstillande.\nParacetamol 500mg 2 tabletter 3 gånger dagligen i 4 veckor. Smärtstillande. ")
+        Element('indate-input').element.innerText = (yesterday)
     def submit_function(*args, **kwargs):
 
         global indate 
