@@ -13,50 +13,50 @@
     </select>
     <button id="select-button" type="submit" pys-onClick="select_function" style="border-color:#000;border-width:1px;"/>>OK</button>
 
-<hr style="margin:0em 0em 1.5em 0em;" >
-<hr style="margin:0em 0em 1.5em 0em;" >
-<hr style="margin:0em 0em 1.5em 0em;" >
+<hr style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" >
+<hr style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" >
+<hr style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" >
 
 
     <div>Type in date input here</div>
-    <input style="margin:0em 0em 1.5em 0em;" type="text" id="indate-input" style="border-color:#000;border-width:1px;"/>
+    <input style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" type="text" id="indate-input" />
 
     <div>Type out dateinput here</div>
-    <input style="margin:0em 0em 1.5em 0em;" type="text" id="outdate-input" style="border-color:#000;border-width:1px;"/>
+    <input style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" type="text" id="outdate-input" style="border-color:#000;border-width:1px;"/>
 
     <div>Type op date input here</div>
-    <input style="margin:0em 0em 1.5em 0em;" type="text" id="opdate-input" style="border-color:#000;border-width:1px;"/>
+    <input style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" type="text" id="opdate-input" style="border-color:#000;border-width:1px;"/>
 
     <div>Type type input here</div>
-    <input style="margin:0em 0em 1.5em 0em;" type="text" id="type-input" style="border-color:#000;border-width:1px;"/>
+    <input style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" type="text" id="type-input" style="border-color:#000;border-width:1px;"/>
 
     <div>Type side input here</div>
-    <select style="margin:0em 0em 1.5em 0em;" id="side-input">
+    <select style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" id="side-input">
         <option value="höger sida">höger sida</option>
         <option value="vänster sida">vänster sida</option>
         <option value="båda sidor">båda sidor</option>
     </select>
 
     <div>Type ward input here</div>
-    <input style="margin:0em 0em 1.5em 0em;" type="text" id="ward-input" style="border-color:#000;border-width:1px;"/>
+    <input style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" type="text" id="ward-input" style="border-color:#000;border-width:1px;"/>
 
     <button id="submit-button" type="submit" pys-onClick="submit_function" style="border-color:#000;border-width:1px;">OK</button>
     <hr style="border:1em;">
     <div id="output"></div>
-<hr style="margin:0em 0em 1.5em 0em;" >
-<hr style="margin:0em 0em 1.5em 0em;" >
-<hr style="margin:0em 0em 1.5em 0em;" >
+<hr style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" >
+<hr style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" >
+<hr style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" >
 <b>Läkemdel</b><br>
 <div id="pharma-list">
 </div>
-<hr style="margin:0em 0em 1.5em 0em;" >
-<hr style="margin:0em 0em 1.5em 0em;" >
-<hr style="margin:0em 0em 1.5em 0em;" >
+<hr style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" >
+<hr style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" >
+<hr style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" >
 <b>Plan</b>
 <div id="plan"></div>
-<hr style="margin:0em 0em 1.5em 0em;" >
-<hr style="margin:0em 0em 1.5em 0em;" >
-<hr style="margin:0em 0em 1.5em 0em;" >
+<hr style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" >
+<hr style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" >
+<hr style="margin:0em 0em 1.5em 0em;border-color:#000;border-width:1px;background-color:#eeeeee;" >
 <b>Epikris</b>
 <div id="epikris"></div>
     <py-env>
@@ -123,7 +123,7 @@
             Element('type-input').element.value = "dekompression av ryggmärgen och nervrötter"
             Element('ward-input').element.value = "78"
             Element('pharma-list').element.innerText = pharma_pat
-            Element('plan').element.innerText = ("")
+            Element('plan').element.innerText = ("Sårkontroll om 2 veckor. Sjukgymnast 2 månader. Telefonsamtal med operator 2 månader.")
             side = ""
             Element('epikris').element.innerText = ("Ansvarig läkare:\nInskrivningsdatum:\n%s\n\nUtskrivningsdatum:\n%s\n\nVårdsammanfattning:\nDekompression av nervrötter och ryggmärg samt mobilisering utförd.\n\nUppmärksamhetssignal:\nKontrollerad\n\nBedömning:\nPatienten skrivs ut med pharmakologisk behandling. Bedöms kunna återgå till habitualtillstånd inom 4 månader. \n\nPlanering:\nSårkontroll om 14 dagar. Remiss skickas till sjukgymnast. Telefonkontakt med operatör om 2 månader.\n\nLäkemedel\n%s\n\nICD\nMM488K\n%s\n\n" %(indate, outdate, side, pharma, ICD))
         Element('indate-input').element.value = (str(yesterday))
