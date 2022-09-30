@@ -1,1 +1,10 @@
-B_Hb_decreased? -> test. ;
+B_Hb_decreased? -> MCV. ;
+B_Hb_decreased? -> D649_anemia ;
+MCV. -> MCV_decreased? ;
+MCV. -> MCV_normal? ;
+MCV. -> MCV_increased? ;
+
+MCV_decreased? -> microcytic_anemia ;
+MCV_normal? -> normocytic_anemia ;
+MCV_increased? -> macrocytic_anemia ;
+
