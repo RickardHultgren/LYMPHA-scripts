@@ -14,3 +14,7 @@ TEN_nails_reposition. -> gypsum_splint_3_to_4w. ;
 opened_reposition. -> gypsum_splint_3_to_4w. ;
 injury_in_upper_extremity_2? -> injury_in_upper_extremity_3? ;
 gypsum_splint_3_to_4w. -> injury_in_upper_extremity_3?
+
+# 5-weeks gypsum for ligament injury in children
+
+# bacterial tendovaginitis
