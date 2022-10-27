@@ -20,3 +20,13 @@ gypsum_splint_3_to_4w. -> injury_in_upper_extremity_3?
 # 2-3-weeks gypsum for fracture injury in young children
 
 # bacterial tendovaginitis
+
+#Humerus fracture in dault:
+injury_in_upper_extremity_1? -> humerus_fracture_in_child? ;
+humerus_fracture_in_child? -> malalignment? ;
+malalignment? -> closed_reposition. ;
+malalignment? -> reposition. ;
+closed_reposition. -> gypsum_splint_1w ;
+gypsum_splint_1w -> ortosis_8_10w ;
+
+
